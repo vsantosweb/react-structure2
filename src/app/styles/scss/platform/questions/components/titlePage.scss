@@ -1,0 +1,74 @@
+@import "../section-results/variables.scss";
+
+.result .titlePage {
+    // svg {
+    //     height: 15px;
+    // }
+    // svg line {
+    //     stroke: $text-primary;
+    //     stroke-width: 7px;
+    //     transform: translateX(-27px);
+    // }
+    .title {
+        margin-top: 25px;
+        span {
+            color: white;
+            font-weight: 700;
+            font-size: 1.2em;
+            border-top-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+            padding: 15px 35px;
+            text-transform: uppercase;
+            &.bg-primaryReport {
+                background: linear-gradient(to right, #c0172e, #d81f51);
+            }
+            &.bg-gradientOrange1 {
+                background: linear-gradient(to right, #e74616, #f3b816);
+            }
+            &.bg-gradientYellow {
+                background: linear-gradient(to right, #efd717, #9ec42c);
+            }
+            &.bg-gradientGreen {
+                background: linear-gradient(to right, #93C01F, #2eaf87);
+            }
+            &.bg-gradientBlue {
+                background: linear-gradient(to right, #189b75, #1667ab);
+            }
+            &.bg-gradientOrange {
+                background: linear-gradient(to right, #f29100, #1b4a6d);
+            }
+            &.bg-gradientBlue2 {
+                background: linear-gradient(to right, #1667ab, #155682);
+            }
+            &.bg-gradientBlueRed {
+                background: linear-gradient(to right, #1667ab, #c0172e);
+            }
+            &.bg-gradientDark {
+                background: linear-gradient(to right, #2b4259, #001539);
+            }
+        }
+    }
+    .subtitle {
+        margin-left: -90px;
+        margin-top: 45px;
+        .title {
+            margin-top: 0;
+            span {
+                background-color: $background-secondary;
+                font-size: 1em;
+            }
+        }
+        &.inline {
+            font-size: 1.2em;
+            padding-left: 40px;
+            svg {
+                position: absolute;
+                right: 0;
+                align-self: center;
+                line {
+                    stroke: $background-secondary;
+                }
+            }
+        }
+    }
+}

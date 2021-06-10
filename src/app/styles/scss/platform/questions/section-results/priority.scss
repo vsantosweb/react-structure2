@@ -1,0 +1,19 @@
+@import "./variables.scss";
+
+.result .profile .priority {
+    .texts {
+        border-top: 2px solid #2c7fcb;
+        padding: 0px 0 15px 0;
+        .title {
+            background-color: #2c7fcb;
+            padding: 5px;
+            position: relative;
+            top: -15px;
+            font-weight: 600;
+            color: white;
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+}

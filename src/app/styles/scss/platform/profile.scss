@@ -1,0 +1,45 @@
+.profile {
+	&.respondent {
+		.platformSection.form {
+			.content {
+				.userProfile {
+					width: 200px;
+					height: 200px;
+					background-color: #f3f3f3;
+					border-radius: 50%;
+					// position: relative;
+					margin: 50px auto 15px auto;
+					// top: -100px;
+				}
+			}
+			#btn-save {
+				display: none;
+			}
+			#btn-cancel {
+				display: none;
+			}
+		}
+	}
+}
+@media (max-width: 1550px) {
+	.profile {
+		.platformSection {
+			.content {
+				.titles {
+					padding-bottom: 50px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 920px) {
+	.profile {
+		.platformSection {
+			.content {
+				.titles {
+					padding-bottom: 75px;
+				}
+			}
+		}
+	}
+}

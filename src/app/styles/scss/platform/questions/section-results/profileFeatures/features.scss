@@ -1,0 +1,38 @@
+@import "../variables.scss";
+
+.result .profile .features {
+    margin-top: 25px;
+    .featuresTable {
+        padding: 0;
+        margin-top: 15px;
+        .featureTitle {
+            background-color: #1b4a6d;
+            color: white;
+            padding: 5px;
+            text-transform: uppercase;
+            font-weight: 600;
+            &.motivadores {
+                background-color: #f29100;
+            }
+        }
+        ul {
+            padding-top: 0;
+        }
+        &:first-child {
+            // border-right: 3px solid $background-secondary;
+            &.motivadores {
+                background-color: #f29100;
+            }
+        }
+        li {
+            padding: 5px 30px;
+            align-self: center;
+            &:nth-child(even) {
+                background-color: #15568223;
+            }
+            &.motivadores:nth-child(even) {
+                background-color: #ec701f;
+            }
+        }
+    }
+}

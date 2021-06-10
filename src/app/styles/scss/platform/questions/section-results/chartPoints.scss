@@ -1,0 +1,42 @@
+@import "./variables.scss";
+
+.result .chartResults {
+    ul {
+        list-style-type: none;
+    }
+    .resultTable {
+        border: none;
+        font-weight: 600;
+        thead tr {
+            th {
+                background-color: #001539;
+                border: 2px solid #001539;
+                text-align: center;
+                color: white;
+                &:first-child {
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+        }
+        tbody tr {
+            td {
+                border: 2px solid #001539;
+                text-align: center;
+                &.count {
+                    background-color: #001539;
+                    color: white;
+                    text-align: center;
+                    vertical-align: middle;
+                    display: table-cell;
+                }
+            }
+            &:last-child td:last-child {
+                background-color: #001539;
+                @media print {
+                    background-color: #001539;
+                }
+            }
+        }
+    }
+}

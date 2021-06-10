@@ -1,0 +1,99 @@
+@use 'sass:map';
+@import "../variables.scss";
+
+$dark: map-get($theme-colors, "dark");
+
+nav.navbar.templete {
+	// -webkit-transition: all 0.6s ease-out;
+	// -moz-transition: all 0.6s ease-out;
+	// -o-transition: all 0.6s ease-out;
+	// -ms-transition: all 0.6s ease-out;
+	// transition: all 0.6s ease-out;
+	.logo {
+		width: 80px;
+		transform: scaleX(-1);
+		margin-left: 25px;
+	}
+	.btnLink {
+		color: white;
+	}
+	.user {
+		display: flex;
+
+		.userArea {
+			width: 50px;
+			height: 50px;
+			background-color: white;
+			border-radius: 50%;
+			overflow: hidden;
+			.userIcon {
+				transform: scaleX(-1) translateY(5px);
+				.head {
+					transform-origin: center;
+					// &:hover{
+					// 	animation: head-shaker 2s ;
+					// }
+				}
+			}
+			&:hover {
+				.head {
+					animation: head-shaker 2s;
+				}
+			}
+		}
+	}
+	.dropdown-toggle::after {
+		display: none;
+	}
+}
+@media (max-width: 992px) {
+	.navbar.templete {
+		box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.39);
+		.logo {
+			width: 50px !important;
+			margin-left: 15px !important;
+		}
+		.user {
+			margin-top: 15px;
+			flex-direction: row-reverse;
+			.userData{
+				display: flex;
+				align-items: center;
+				.userArea {
+					margin-right: 15px;
+				}
+			}
+		}
+		.nav-link {
+			&.btnLogin {
+				margin-top: 25px;
+				background-color: $dark;
+				text-align: center;
+				border-radius: 25px;
+				color: white;
+				&:hover {
+					color: white;
+				}
+			}
+		}
+	}
+}
+
+/* KEYFRAME */
+@keyframes head-shaker {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(-10deg);
+	}
+	50% {
+		transform: rotate(5deg);
+	}
+	75% {
+		transform: rotate(-7deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}

@@ -1,0 +1,67 @@
+@import "../variables.scss";
+footer {
+	width: 100%;
+	min-height: 300px;
+	position: relative;
+	bottom: 0;
+	margin-top: 150px;
+	padding: 50px 85px;
+	h3 {
+		font-size: 30px;
+		color: white;
+		font-weight: 600;
+		@media (max-width: 762px) {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	&.app {
+		min-height: auto;
+	}
+	&.siteFooter {
+		text-align: center;
+		h3 {
+			width: 100%;
+			letter-spacing: 15px;
+			margin-bottom: 25px;
+		}
+	}
+	.siteMap {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		margin-top: 25px;
+		&.icons{
+			@media (max-width: 762px) {
+				flex-direction: initial;
+			}
+		}
+		@media (max-width: 762px) {
+			flex-direction: column;
+		}
+		a {
+			transition: transform 0.3s;
+			color: white;
+			font-size: 0.8em;
+			font-weight: 600;
+			padding: 15px 25px;
+			@media (max-width: 762px) {
+				display: flex;
+				justify-content: center;
+			}
+			&.link:hover {
+				transition: transform 0.3s;
+				transform: translateX(-5px);
+			}
+			&.iconLink {
+				.icon {
+					width: 15px;
+				}
+				&:hover {
+					transition: transform 0.3s;
+					transform: translateY(-5px);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+
+@function bounce($direction) {
+    @return bounceTo + $direction;
+}
+
+@keyframes bounceToRight {
+    0% {
+        transform: translateX(-15px);
+    }
+    100% {
+        transform: translateX(15px);
+    }
+}

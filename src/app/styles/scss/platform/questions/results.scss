@@ -1,0 +1,22 @@
+.result{
+    // font-size: 'Open Sans'!important;
+    p{
+        font-weight: 600;
+        opacity: 0.9;
+    }
+    background-color: #f9f9f9;
+    overflow: hidden;
+    .breakPage{
+        clear: both;
+        page-break-after: always;
+    }
+}
+
+.report #btnPrint{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    @media print {
+        display: none;
+    }
+}
