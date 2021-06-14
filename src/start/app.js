@@ -15,6 +15,7 @@ import { SessionProvider } from './Session/SessionContext';
 import AppRoutes from './router';
 import history from '../history';
 import SEO from '../app/components/SEO';
+import Theme from '../theme';
 
 
 export default function App(props) {
@@ -22,17 +23,19 @@ export default function App(props) {
     const [layout, setLayout] = useState(false);
     const [pageInfo, pageConfig] = useState({});
 
-    useEffect(() => {}, [pageInfo])
+    useEffect(() => { }, [pageInfo])
 
     return (
         <ErrorBoundary>
             <SessionProvider>
-                <Router history={history}>
-                    <Layout layoutType={layout}>
-                        <SEO {...pageInfo} />
-                        <AppRoutes setLayout={setLayout} layout={setLayout} pageConfig={pageConfig} />
-                    </Layout>
-                </Router>
+                <Theme>
+                    <Router history={history}>
+                        <Layout layoutType={layout}>
+                            <SEO {...pageInfo} />
+                            <AppRoutes setLayout={setLayout} layout={setLayout} pageConfig={pageConfig} />
+                        </Layout>
+                    </Router>
+                </Theme>
             </SessionProvider>
         </ErrorBoundary>
     )
